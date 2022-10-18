@@ -1,15 +1,17 @@
-export default function LandingPage () {
+export default function LandingPage() {
   return (
-    <div className="h-[28rem] bg-primary">
-      <div className="container flex flex-wrap justify-between items-center mx-auto">
-        <div className="grid grid-cols-2 w-full mt-20">
-          <div className="flex justify-center">
-            <div className="">
-              <span className="text-7xl text-white">
-                Tu carro en tus terminos
-              </span>
+    <div className="h-auto w-full bg-primary">
+      <div className="container flex flex-wrap md:flex-none mx-auto py-8">
+        <div className="flex justify-center w-full sm:w-1/2">
+          <div className="w-auto">
+            <div className="text-6xl sm:text-7xl text-white text-center sm:text-left">
+              Tu carro en tus terminos
+            </div>
+            <div className="flex sm:flex-none justify-center sm:justify-start">
               <div className="flex flex-col justify-items-center mt-10 w-80">
-                <span className="text-2xl text-white">Desde $40 dolares por día</span>
+                <span className="text-2xl text-white">
+                  Desde $40 dolares por día
+                </span>
                 <div className="mt-6">
                   <button
                     type="button"
@@ -21,11 +23,14 @@ export default function LandingPage () {
               </div>
             </div>
           </div>
-          <div>
-            <img src="https://d2uye8zq02lejp.cloudfront.net/web/images/hero.webp" />
-          </div>
+        </div>
+        <div className="flex justify-center w-full sm:w-1/2 py-6 sm:p-0">
+          <img
+            src="https://d2uye8zq02lejp.cloudfront.net/web/images/hero.webp"
+            className="object-contain"
+          />
         </div>
       </div>
     </div>
   );
-};
+}

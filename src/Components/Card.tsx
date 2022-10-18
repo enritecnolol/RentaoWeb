@@ -4,7 +4,7 @@ type brandInfo  ={
 }
 export default function Card({name, img}: brandInfo) {
   return (
-    <div className="w-48 bg-white rounded-lg border border-gray-200 shadow-md mx-8">
+    <div className="w-48 bg-white rounded-lg border border-gray-200 shadow-md mx-8 my-4 sm:my-2">
       <a href="#">
         <img
           className="rounded-t-lg h-36 object-cover"
