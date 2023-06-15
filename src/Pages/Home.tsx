@@ -5,6 +5,7 @@ import Header from "../Layouts/Header";
 import HowItWorksCard from "../Components/HowItWorksCard";
 import HowItWorksIcon2 from "../Components/SVGs/HowItWorksIcon2";
 import HowItWorksIcon3 from "../Components/SVGs/HowItWorksIcon3";
+import Footer from "../Layouts/Footer";
 
 type brandInfo = {
   name: string;
@@ -37,7 +38,7 @@ export default function Home() {
     },
     {
       name: "bmw",
-      img: "https://cdn.pocket-lint.com/r/s/1201x/assets/images/131103-cars-review-bmw-m3-review-2014-image1-J6uYiX4nP2.jpg",
+      img: "https://mozcarro.s3.amazonaws.com/uploads/picture/url/42718/big_with_watermark_bmw-m3-maputo-maputo-6755.jpg",
     },
   ];
 
@@ -72,8 +73,8 @@ export default function Home() {
           <div className="w-full">
             <div className="text-xl mt-5 font-bold text-center sm:text-left">Navegar por marca</div>
             <div className={`mt-5 flex flex-wrap justify-around`}>
-              {brandList.map((brand) => {
-                return <Card name={brand.name} img={brand.img} />;
+              {brandList.map((brand, index) => {
+                return <Card name={brand.name} key={index} img={brand.img} />;
               })}
             </div>
           </div>
@@ -89,9 +90,10 @@ export default function Home() {
             </div>
             <div className="w-full">
               <div className="my-10 flex flex-wrap justify-around">
-                {HowItWorksCardList.map((HowItWorks) => {
+                {HowItWorksCardList.map((HowItWorks, index) => {
                   return (
                     <HowItWorksCard
+                      key={index}
                       svg={HowItWorks.svg}
                       title={HowItWorks.title}
                       description={HowItWorks.description}
@@ -131,6 +133,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
